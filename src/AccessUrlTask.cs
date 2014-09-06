@@ -37,7 +37,7 @@
 
                 Console.WriteLine("HTTP STATUS: {0}", code);
 
-                result = (code == HttpStatusCode.OK);
+                result = (((int)HttpStatusCode.OK <= (int)code) && ((int)code <= (int)HttpStatusCode.MultipleChoices));
             }
             catch (System.Exception ex)
             {
